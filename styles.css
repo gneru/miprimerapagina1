@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(245, 247, 247);
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 45px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.parrafo {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.imagen {
+    margin: 20px;
+    height: 300px 
+}
+
+.contenedor1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(115, 161, 150);
+    height: 80px;
+    line-height: 80px;
+}
+
+.header .nav .nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu-link:hover {
+    transition: all 0.3s;
+    color: white;
+    transform: scale(2px);
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 15px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.header .nav .nav-toggle {
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.contenedor2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor2 button {
+    background-color: rgb(252, 203, 112);
+    border: solid 0.5px grey;
+    font-size: 24px;
+    padding: 10px;
+}
+.contenedor2 button:hover {
+    background-color: grey;
+    color: #fff;
+    border: solid 1px rgb(252, 203, 112);
+}
+
+
+.pie-pagina {
+    width: 100%;
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.pie-pagina .grupo-1 {
+    margin: 0px 40px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45%;
+    line-height: 45px; 
+    color: #fff;
+    margin-right: 10px;
+    background-color: rgb(163, 162, 162);
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(255, 201, 251);
+}
+.pie-pagina .grupo-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .contenedor1 {
+        flex-direction: column;        
+    }
+
+    .header .nav .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: rgb(236, 233, 228);
+        position: fixed;
+        left: 0%;
+        top: 80px;
+        width: 40%;
+        padding: 20px 0;
+        border: solid 0.5px rgb(218, 216, 216);
+
+        height: calc(100%-60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .header .nav .nav-toggle {
+        display: block;
+        margin: 10px;
+    }
+
+    .nav-menu_visible {
+        left: 0%;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        padding: 20px 0px;
+    }
+}
